@@ -1,4 +1,4 @@
-const repo = 'glaum-site'; // change to your repo name
+const repo = 'glaum-website'; // change to your repo name
 const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
