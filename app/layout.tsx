@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: 'Glåüm - Building Community Together',
   description: 'A place where values meet action, and community grows through shared purpose.',
   viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
