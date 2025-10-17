@@ -8,9 +8,108 @@ import Image from 'next/image'
 
 export default function HomePage() {
   return (
+    <div className="min-h-screen" style={{ backgroundColor: '#D239F8' }}>
     <>
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/20 backdrop-blur-md">
+        <Container>
+          <div className="md:hidden">
+            <input type="checkbox" id="mobile-menu-toggle" className="hidden" />
+            <div className="flex items-center justify-between py-4">
+              <a href="#hero" className="font-tokyo text-3xl font-normal" style={{ color: '#FFFACD' }}>
+                Glåüm
+              </a>
+              <label 
+                htmlFor="mobile-menu-toggle" 
+                className="cursor-pointer hover:text-[#634D0B] transition-colors p-2 block" 
+                style={{ color: '#FFFACD' }}
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </label>
+            </div>
+            
+            {/* Mobile menu */}
+            <div className="mobile-menu bg-white/20 backdrop-blur-md border-t border-white/20">
+              <div className="px-4 py-4 space-y-4">
+                <a 
+                  href="#hero" 
+                  className="block text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" 
+                  style={{ color: '#FFFACD' }}
+                >
+                  Home
+                </a>
+                <a 
+                  href="#testimonials" 
+                  className="block text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" 
+                  style={{ color: '#FFFACD' }}
+                >
+                  Testimonials
+                </a>
+                <a 
+                  href="#attunement" 
+                  className="block text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" 
+                  style={{ color: '#FFFACD' }}
+                >
+                  Attunement
+                </a>
+                <a 
+                  href="#values" 
+                  className="block text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" 
+                  style={{ color: '#FFFACD' }}
+                >
+                  Benefits
+                </a>
+                <a 
+                  href="#tenets" 
+                  className="block text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" 
+                  style={{ color: '#FFFACD' }}
+                >
+                  Tenets
+                </a>
+                <a 
+                  href="#policies" 
+                  className="block text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" 
+                  style={{ color: '#FFFACD' }}
+                >
+                  Policies
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          {/* Desktop navigation */}
+          <div className="hidden md:flex items-center justify-between py-4">
+            <a href="#hero" className="font-tokyo text-3xl font-normal" style={{ color: '#FFFACD' }}>
+              Glåüm
+            </a>
+            <div className="flex space-x-8">
+              <a href="#hero" className="text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" style={{ color: '#FFFACD' }}>
+                Home
+              </a>
+              <a href="#testimonials" className="text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" style={{ color: '#FFFACD' }}>
+                Testimonials
+              </a>
+              <a href="#attunement" className="text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" style={{ color: '#FFFACD' }}>
+                Attunement
+              </a>
+              <a href="#values" className="text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" style={{ color: '#FFFACD' }}>
+                Benefits
+              </a>
+              <a href="#tenets" className="text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" style={{ color: '#FFFACD' }}>
+                Tenets
+              </a>
+              <a href="#policies" className="text-lg font-tokyo font-normal hover:text-[#634D0B] transition-colors" style={{ color: '#FFFACD' }}>
+                Policies
+              </a>
+            </div>
+          </div>
+        </Container>
+      </nav>
+
       {/* Hero Section */}
-      <Section className="pt-20 pb-16 lg:pt-32 lg:pb-24">
+      <Section id="hero" className="pt-24 pb-16 lg:pt-36 lg:pb-24">
         <Container>
           <div className="text-center w-full">
             {/* Hero Image */}
@@ -53,6 +152,8 @@ export default function HomePage() {
                 Trust is the first step toward attunement — and attunement feels exactly right.
               </p>
             </div>
+            
+            <div id="testimonials"></div>
             
             {/* Testimonials Image */}
             <div className="relative mb-12 rounded-2xl overflow-hidden shadow-2xl max-w-3xl mx-auto" style={{ filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.35))' }}>
@@ -140,7 +241,7 @@ export default function HomePage() {
             </div>
             
             {/* GLÅÜMESES Header */}
-            <div className="text-center pt-40 mb-16">
+            <div id="values" className="text-center pt-40 mb-16">
               <h2 className="font-tokyo text-5xl lg:text-7xl mb-2 pb-2" style={{ color: '#634D0B' }}>
                 Glåümises
               </h2>
@@ -185,7 +286,7 @@ export default function HomePage() {
       </Section>
 
       {/* Is this a joke Section */}
-      <Section className="pt-16 pb-16">
+      <Section id="attunement" className="pt-16 pb-16">
         <Container>
           <div className="text-center">
             {/* Is this a joke Header */}
@@ -290,7 +391,7 @@ export default function HomePage() {
       </Section>
 
       {/* A note on cults Section */}
-      <Section className="pt-16 pb-16">
+      <Section id="cults" className="pt-16 pb-16">
         <Container>
           <div className="text-center">
             {/* A note on cults Header */}
@@ -356,7 +457,7 @@ export default function HomePage() {
       </Section>
 
       {/* Tenets of Glåüm Section */}
-      <Section className="pt-16 pb-16">
+      <Section id="tenets" className="pt-16 pb-16">
         <Container>
           <div className="text-center">
             {/* Tenets of Glåüm Header */}
@@ -682,7 +783,7 @@ export default function HomePage() {
       </Section>
 
       {/* Policies of the ManyHands Section */}
-      <Section>
+      <Section id="policies">
         <Container>
           <div className="text-center">
             <div className="max-w-4xl mx-auto px-4">
@@ -860,6 +961,18 @@ export default function HomePage() {
           </div>
         </Container>
       </Section>
+
+      {/* Footer */}
+      <footer className="bg-white/20 backdrop-blur-md border-t border-white/20 py-8">
+        <Container>
+          <div className="text-center">
+            <p className="font-tokyo text-lg" style={{ color: '#FFFACD' }}>
+              Glåüm.ca © 2022 – Sponsored by Shrimp™
+            </p>
+          </div>
+        </Container>
+      </footer>
     </>
+    </div>
   )
 }

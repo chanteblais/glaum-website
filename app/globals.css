@@ -128,3 +128,12 @@
     }
   }
 }
+
+/* Mobile menu toggle */
+#mobile-menu-toggle:checked ~ .mobile-menu {
+  display: block !important;
+}
+
+.mobile-menu {
+  display: none;
+}
