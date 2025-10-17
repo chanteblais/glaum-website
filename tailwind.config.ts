@@ -34,6 +34,7 @@ const config: Config = {
           'Arial',
           'sans-serif',
         ],
+        tokyo: ['TokyoDreams', 'serif'],
       },
       container: {
         center: true,

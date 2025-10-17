@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Font Face Declarations */
+@font-face {
+  font-family: 'TokyoDreams';
+  src: url('/fonts/TokyoDreamsPlain.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TokyoDreams';
+  src: url('/fonts/TokyoDreams.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -74,5 +91,40 @@
   button:focus-visible,
   a:focus-visible {
     @apply focus-visible;
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    animation: shimmer 12s infinite;
+    z-index: 1;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    25% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
   }
 }
