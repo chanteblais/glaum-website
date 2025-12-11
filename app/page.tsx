@@ -260,14 +260,15 @@ export default function HomePage() {
                 
                 {/* Glåümises Image */}
                 <div className="relative mt-8 mb-16 rounded-2xl overflow-hidden shadow-2xl" style={{ filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.35))' }}>
-                {/* Mobile Glåümises Image */}
+                {/* Mobile Glåümises Image - using desktop version for better quality on retina displays */}
                 <Image
-                  src="/images/glaumises-mobile.webp"
+                  src="/images/glaumises-desktop.webp"
                   alt="Glåümises"
-                  width={800}
+                  width={1200}
                   height={600}
                   className="w-full h-auto block md:hidden"
                   priority
+                  quality={100}
                 />
                 {/* Desktop Glåümises Image */}
                 <Image
@@ -277,6 +278,7 @@ export default function HomePage() {
                   height={600}
                   className="w-full h-auto hidden md:block"
                   priority
+                  quality={100}
                 />
                 </div>
               </div>
