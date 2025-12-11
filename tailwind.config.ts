@@ -20,6 +20,9 @@ const config: Config = {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
       },
+      textColor: {
+        DEFAULT: 'white',
+      },
       borderRadius: {
         '2xl': '1rem',
       },

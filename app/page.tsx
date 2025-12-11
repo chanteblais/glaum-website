@@ -179,7 +179,7 @@ export default function HomePage() {
             
             {/* Divider */}
             <div className="flex justify-center pt-16 pb-8">
-              <div className="w-32 h-0.5 rounded-full" style={{ backgroundColor: '#634D0B' }}></div>
+              <div className="w-32 h-0.5 rounded-full bg-[#C8A848]" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.7)' }}></div>
             </div>
             
             {/* What is Glåüm Header */}
@@ -191,7 +191,7 @@ export default function HomePage() {
               {/* Glåüm Description */}
               <div className="max-w-4xl mx-auto px-4" style={{ fontFamily: 'var(--font-libre-baskerville), serif' }}>
                 <p className="text-lg lg:text-xl text-glaum-ink/80 mb-6" style={{ lineHeight: '1.7' }}>
-                  Glåüm is the frequency of perfect attunement between self and all.
+                  Glåüm is the state of perfect attunement between self and all.
                 </p>
                 <p className="text-lg lg:text-xl text-glaum-ink/80 mb-6" style={{ lineHeight: '1.7' }}>
                   It is the highest reality: the form reality takes when all its parts move in perfect coherence.
@@ -246,7 +246,7 @@ export default function HomePage() {
                 Glåümises
               </h2>
               <div className="flex justify-center mb-12">
-                <div className="w-48 h-0.5 rounded-full" style={{ backgroundColor: '#634D0B' }}></div>
+                <div className="w-48 h-0.5 rounded-full bg-[#C8A848]" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.7)' }}></div>
               </div>
               
               {/* Glåümeses Description */}
@@ -295,7 +295,7 @@ export default function HomePage() {
                 ... Is this a joke?
               </h2>
               <div className="flex justify-center mb-12">
-                <div className="w-[30rem] h-0.5 rounded-full" style={{ backgroundColor: '#634D0B' }}></div>
+                <div className="w-[30rem] h-0.5 rounded-full bg-[#C8A848]" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.7)' }}></div>
               </div>
               
               {/* Core Values Text */}
@@ -400,7 +400,7 @@ export default function HomePage() {
                 A note on cults
               </h2>
               <div className="flex justify-center mb-12">
-                <div className="w-48 h-0.5 rounded-full" style={{ backgroundColor: '#634D0B' }}></div>
+                <div className="w-48 h-0.5 rounded-full bg-[#C8A848]" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.7)' }}></div>
               </div>
               
               {/* A note on cults Text */}
@@ -466,7 +466,7 @@ export default function HomePage() {
                 Tenets of Glåüm
               </h2>
               <div className="flex justify-center mb-12">
-                <div className="w-48 h-0.5 rounded-full" style={{ backgroundColor: '#634D0B' }}></div>
+                <div className="w-48 h-0.5 rounded-full bg-[#C8A848]" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.7)' }}></div>
               </div>
               
               {/* Tenets Introduction Text */}
@@ -791,7 +791,7 @@ export default function HomePage() {
                 Policies of the ManyHands
               </h2>
               <div className="flex justify-center">
-                <div className="w-48 h-0.5 rounded-full" style={{ backgroundColor: '#634D0B' }}></div>
+                <div className="w-48 h-0.5 rounded-full bg-[#C8A848]" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.7)' }}></div>
               </div>
               <div className="mb-12"></div>
               

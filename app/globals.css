@@ -31,8 +31,20 @@
   }
   
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background;
+    color: #F3EDE6;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Set all paragraphs to body color - using !important to override Tailwind utilities */
+  p {
+    color: #F3EDE6 !important;
+  }
+
+  /* Set all headers to gold color - using !important to override Tailwind utilities */
+  h1, h2, h3, h4, h5, h6 {
+    color: #C8A848 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   }
 
   /* Skip link for accessibility */
