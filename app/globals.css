@@ -73,6 +73,51 @@ body {
   bottom: -0.45rem;
 }
 
+/* Radiant sunburst behind the hero image */
+.hero-radiance {
+  position: relative;
+}
+
+.hero-radiance::before {
+  content: "";
+  position: absolute;
+  inset: -16% -24%;
+  background:
+    repeating-conic-gradient(
+      from 0deg,
+      rgba(255, 250, 205, 0.9) 0deg 2.2deg,
+      transparent 2.2deg 10deg
+    ),
+    repeating-conic-gradient(
+      from 5deg,
+      rgba(200, 168, 72, 0.55) 0deg 3.5deg,
+      transparent 3.5deg 10deg
+    );
+  mask-image: radial-gradient(
+    ellipse closest-side,
+    black 30%,
+    rgba(0, 0, 0, 0.6) 62%,
+    transparent 99%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse closest-side,
+    black 30%,
+    rgba(0, 0, 0, 0.6) 62%,
+    transparent 99%
+  );
+  pointer-events: none;
+}
+
+/* Double gold frame for the hero image */
+.hero-frame {
+  border: 3px solid var(--color-gold);
+  outline: 1px solid color-mix(in srgb, var(--color-gold) 55%, transparent);
+  outline-offset: 6px;
+  box-shadow:
+    0 0 60px rgba(255, 250, 205, 0.35),
+    0 25px 60px rgba(36, 20, 48, 0.35);
+}
+
 /* Gentle shimmer sweep, ported from the old site's attuned image */
 .shimmer {
   position: relative;

@@ -40,25 +40,27 @@ export default function HomePage() {
       <EntryScreen />
 
       {/* ── Hero ── */}
-      <section id="hero" className="pt-28 pb-16 lg:pt-36 lg:pb-20">
+      <section id="hero" className="pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-x-clip">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="relative mb-10 rounded-2xl overflow-hidden shadow-2xl border border-gold/40">
-            <Image
-              src="/images/hero-family-mobile.webp"
-              alt="Glåüm community family"
-              width={800}
-              height={600}
-              className="w-full h-auto block md:hidden"
-              priority
-            />
-            <Image
-              src="/images/hero-family-desktop.webp"
-              alt="Glåüm community family"
-              width={1200}
-              height={600}
-              className="w-full h-auto hidden md:block"
-              priority
-            />
+          <div className="hero-radiance mb-10">
+            <div className="relative rounded-2xl overflow-hidden hero-frame">
+              <Image
+                src="/images/hero-family-mobile.webp"
+                alt="Glåüm community family"
+                width={800}
+                height={600}
+                className="w-full h-auto block md:hidden"
+                priority
+              />
+              <Image
+                src="/images/hero-family-desktop.webp"
+                alt="Glåüm community family"
+                width={1200}
+                height={600}
+                className="w-full h-auto hidden md:block"
+                priority
+              />
+            </div>
           </div>
 
           <div className="max-w-3xl mx-auto text-center space-y-4">
