@@ -302,7 +302,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Tenets of Glåüm ── */}
-      <section id="tenets" className="py-16 scroll-mt-24">
+      <section id="tenets" className="py-16 scroll-mt-24 overflow-x-clip">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHeading>Tenets of Glåüm</SectionHeading>
           <div className="max-w-3xl mx-auto space-y-6 text-lg lg:text-xl text-ink/85 leading-[1.7] mb-14">
@@ -321,7 +321,10 @@ export default function HomePage() {
 
           <div className="space-y-14">
             <DecreeCard
-              kicker="Tenets of Glåüm · Article I"
+              series="Tenets of Glåüm"
+              label="Article"
+              numeral="I"
+              tilt="l"
               title="Unconditional Positive Regard"
               icon="regard"
               footer="Ratified by the ManyHands of Glåüm"
@@ -338,7 +341,10 @@ export default function HomePage() {
             </DecreeCard>
 
             <DecreeCard
-              kicker="Tenets of Glåüm · Article II"
+              series="Tenets of Glåüm"
+              label="Article"
+              numeral="II"
+              tilt="r"
               title="Individual Glåüm Ascension"
               icon="ascension"
               footer="Ratified by the ManyHands of Glåüm"
@@ -353,7 +359,10 @@ export default function HomePage() {
             </DecreeCard>
 
             <DecreeCard
-              kicker="Tenets of Glåüm · Article III"
+              series="Tenets of Glåüm"
+              label="Article"
+              numeral="III"
+              tilt="l"
               title="Inclusivity of Members"
               icon="inclusivity"
               footer="Ratified by the ManyHands of Glåüm"
@@ -369,7 +378,10 @@ export default function HomePage() {
             </DecreeCard>
 
             <DecreeCard
-              kicker="Tenets of Glåüm · Article IV"
+              series="Tenets of Glåüm"
+              label="Article"
+              numeral="IV"
+              tilt="r"
               title="Satire with Intention"
               icon="satire"
               footer="Ratified by the ManyHands of Glåüm"
@@ -409,7 +421,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Policies of the ManyHands ── */}
-      <section id="policies" className="py-16 scroll-mt-24">
+      <section id="policies" className="py-16 scroll-mt-24 overflow-x-clip">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHeading>Policies of the ManyHands</SectionHeading>
           <div className="max-w-3xl mx-auto space-y-6 text-lg lg:text-xl text-ink/85 leading-[1.7] mb-14">
@@ -428,7 +440,10 @@ export default function HomePage() {
 
           <div className="space-y-14">
             <DecreeCard
-              kicker="Policies of the ManyHands · Provision I"
+              series="Policies of the ManyHands"
+              label="Provision"
+              numeral="I"
+              tilt="l"
               title="All feelings are Welcome. All Behaviours are Not"
               icon="feelings"
               footer="Upheld by the ManyHands of Glåüm"
@@ -447,7 +462,10 @@ export default function HomePage() {
             </DecreeCard>
 
             <DecreeCard
-              kicker="Policies of the ManyHands · Provision II"
+              series="Policies of the ManyHands"
+              label="Provision"
+              numeral="II"
+              tilt="r"
               title="The Use of AI: Amplification, not Replacement"
               icon="amplification"
               footer="Upheld by the ManyHands of Glåüm"
