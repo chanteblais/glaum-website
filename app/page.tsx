@@ -321,10 +321,7 @@ export default function HomePage() {
 
           <div className="space-y-14">
             <DecreeCard
-              series="Tenets of Glåüm"
-              label="Article"
-              numeral="I"
-              tilt="l"
+              kicker="Tenets of Glåüm · Article I"
               title="Unconditional Positive Regard"
               icon="regard"
               footer="Ratified by the ManyHands of Glåüm"
@@ -341,10 +338,7 @@ export default function HomePage() {
             </DecreeCard>
 
             <DecreeCard
-              series="Tenets of Glåüm"
-              label="Article"
-              numeral="II"
-              tilt="r"
+              kicker="Tenets of Glåüm · Article II"
               title="Individual Glåüm Ascension"
               icon="ascension"
               footer="Ratified by the ManyHands of Glåüm"
@@ -359,10 +353,7 @@ export default function HomePage() {
             </DecreeCard>
 
             <DecreeCard
-              series="Tenets of Glåüm"
-              label="Article"
-              numeral="III"
-              tilt="l"
+              kicker="Tenets of Glåüm · Article III"
               title="Inclusivity of Members"
               icon="inclusivity"
               footer="Ratified by the ManyHands of Glåüm"
@@ -378,10 +369,7 @@ export default function HomePage() {
             </DecreeCard>
 
             <DecreeCard
-              series="Tenets of Glåüm"
-              label="Article"
-              numeral="IV"
-              tilt="r"
+              kicker="Tenets of Glåüm · Article IV"
               title="Satire with Intention"
               icon="satire"
               footer="Ratified by the ManyHands of Glåüm"
@@ -440,10 +428,7 @@ export default function HomePage() {
 
           <div className="space-y-14">
             <DecreeCard
-              series="Policies of the ManyHands"
-              label="Provision"
-              numeral="I"
-              tilt="l"
+              kicker="Policies of the ManyHands · Provision I"
               title="All feelings are Welcome. All Behaviours are Not"
               icon="feelings"
               footer="Upheld by the ManyHands of Glåüm"
@@ -462,10 +447,7 @@ export default function HomePage() {
             </DecreeCard>
 
             <DecreeCard
-              series="Policies of the ManyHands"
-              label="Provision"
-              numeral="II"
-              tilt="r"
+              kicker="Policies of the ManyHands · Provision II"
               title="The Use of AI: Amplification, not Replacement"
               icon="amplification"
               footer="Upheld by the ManyHands of Glåüm"
