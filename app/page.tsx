@@ -3,7 +3,7 @@ import Link from "next/link";
 import { EntryScreen } from "@/components/EntryScreen";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { SectionHeading } from "@/components/SectionHeading";
-import { OrnateFrame } from "@/components/OrnateFrame";
+import { DecreeCard } from "@/components/DecreeCard";
 
 function ResponsiveImage({
   base,
@@ -320,7 +320,12 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-14">
-            <OrnateFrame title="Unconditional Positive Regard">
+            <DecreeCard
+              kicker="Tenets of Glåüm · Article I"
+              title="Unconditional Positive Regard"
+              icon="regard"
+              footer="Ratified by the ManyHands of Glåüm"
+            >
               <p>
                 The Many Hands of Glåüm recognize the inherent goodness in all
                 beings. Actions that seem out of alignment with that goodness are
@@ -330,9 +335,14 @@ export default function HomePage() {
                 but through this practice, we strengthen the connective fabric of
                 the community.
               </p>
-            </OrnateFrame>
+            </DecreeCard>
 
-            <OrnateFrame title="Individual Glåüm Ascension">
+            <DecreeCard
+              kicker="Tenets of Glåüm · Article II"
+              title="Individual Glåüm Ascension"
+              icon="ascension"
+              footer="Ratified by the ManyHands of Glåüm"
+            >
               <p>
                 Every person&rsquo;s journey to Glåüm is as unique and mysterious as
                 Glåüm itself. Though the inevitability of Glåüm is a certainty, each
@@ -340,9 +350,14 @@ export default function HomePage() {
                 never imposed nor rushed. A person becomes part of Glåüm the moment
                 they feel it resonate in their heart.
               </p>
-            </OrnateFrame>
+            </DecreeCard>
 
-            <OrnateFrame title="Inclusivity of Members">
+            <DecreeCard
+              kicker="Tenets of Glåüm · Article III"
+              title="Inclusivity of Members"
+              icon="inclusivity"
+              footer="Ratified by the ManyHands of Glåüm"
+            >
               <p>
                 Glåüm is open to everyone regardless of background, beliefs, or
                 ideology. The Many Hands of Glåüm is non-exclusive and strengthened
@@ -351,9 +366,14 @@ export default function HomePage() {
                 hold love in your heart, and to engage with the Tenants of Glåüm in
                 good faith.
               </p>
-            </OrnateFrame>
+            </DecreeCard>
 
-            <OrnateFrame title="Satire with Intention">
+            <DecreeCard
+              kicker="Tenets of Glåüm · Article IV"
+              title="Satire with Intention"
+              icon="satire"
+              footer="Ratified by the ManyHands of Glåüm"
+            >
               <p>
                 The ManyHands of Glåüm recognize satire as a sacred
                 instrument—capable of softening or sharpening, diminishing or
@@ -383,7 +403,7 @@ export default function HomePage() {
                 play with responsibility. And that balance, that doubleness, is the
                 Glåüm of it.
               </p>
-            </OrnateFrame>
+            </DecreeCard>
           </div>
         </div>
       </section>
@@ -407,7 +427,12 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-14">
-            <OrnateFrame title="All feelings are Welcome. All Behaviours are Not">
+            <DecreeCard
+              kicker="Policies of the ManyHands · Provision I"
+              title="All feelings are Welcome. All Behaviours are Not"
+              icon="feelings"
+              footer="Upheld by the ManyHands of Glåüm"
+            >
               <p>
                 In Glåüm, anger, sadness, confusion, joy, fear, and shame are all
                 part of the music. We do not turn away from these inner movements.
@@ -419,9 +444,14 @@ export default function HomePage() {
                 floor—until they are ready to return in attunement. Boundaries,
                 lovingly held, are what make the dance safe enough to continue.
               </p>
-            </OrnateFrame>
+            </DecreeCard>
 
-            <OrnateFrame title="The Use of AI: Amplification, not Replacement">
+            <DecreeCard
+              kicker="Policies of the ManyHands · Provision II"
+              title="The Use of AI: Amplification, not Replacement"
+              icon="amplification"
+              footer="Upheld by the ManyHands of Glåüm"
+            >
               <p>
                 The ManyHands of Glåüm recognize AI as a potent instrument for
                 collective creativity. When used with care, it expands
@@ -452,7 +482,7 @@ export default function HomePage() {
                 responsibly, and only in service of the greater attunement of
                 Glåüm.
               </p>
-            </OrnateFrame>
+            </DecreeCard>
           </div>
         </div>
       </section>

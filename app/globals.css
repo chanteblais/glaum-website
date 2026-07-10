@@ -73,6 +73,16 @@ body {
   bottom: -0.45rem;
 }
 
+/* Decree card — ornate-frame base without the top/bottom diamonds
+   (corner ornaments are placed in markup instead) */
+.decree-frame {
+  background: var(--color-parchment);
+  border: 1px solid var(--color-gold);
+  outline: 1px solid color-mix(in srgb, var(--color-gold) 45%, transparent);
+  outline-offset: 5px;
+  box-shadow: 0 12px 40px rgba(36, 20, 48, 0.22);
+}
+
 /* Radiant sunburst behind the hero image */
 .hero-radiance {
   position: relative;
