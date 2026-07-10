@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# glaum.ca — v2
 
-## Getting Started
+The public Glåüm website, rebuilt as a dynamic Next.js app (successor to
+`../glaum-website`, which was statically exported to GitHub Pages). All copy
+ported from the original site; design rebuilt in code (no more text baked over
+frame images); new **Glåümer Registry** profile feature.
 
-First, run the development server:
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+No database setup needed for development: the Registry uses an embedded
+Postgres (PGlite) persisted to `.data/glaum-registry/` (gitignored). It is
+created and seeded with the founding records on first use.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploying (Vercel + Postgres)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a Postgres database (Supabase / Neon / Vercel Postgres).
+2. Run `db/schema.sql` against it once (non-destructive).
+3. Deploy this folder to Vercel with env var `DATABASE_URL` set.
+4. Point the `glaum.ca` domain at the Vercel project when ready to cut over.
 
-## Learn More
+When `DATABASE_URL` is present the app uses that database; otherwise it falls
+back to the embedded dev database.
 
-To learn more about Next.js, take a look at the following resources:
+## The Registry
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/registry` — public directory of registered Glåümers.
+- `/registry/register` — Form 7-G. No accounts, no passwords: on submission the
+  Glåümer receives an **Amendment Key** (a secret link) that is the sole means
+  of editing their record.
+- `/registry/[slug]` — certificate-style public profile.
+- `/registry/[slug]/amend?key=…` — amendment form (requires the key).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Moderation: each row has a `hidden` boolean — flip it in the database to
+remove a record from public view without deleting it.
 
-## Deploy on Vercel
+## Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/` — pages (home, events, registry).
+- `components/` — Nav, Footer, EntryScreen, NewsletterSignup (Brevo),
+  OrnateFrame/SectionHeading (the design system), Sigil (SVG sigils),
+  RegistryForm.
+- `lib/` — db access (`db.ts`, `schema.ts`, `glaumers.ts`) and the Form 7-G
+  vocabularies (`registry-options.ts`).
+- `db/schema.sql` — canonical schema for production.

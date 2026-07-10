@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-tokyo: var(--font-tokyo-dreams), serif;
+  --font-baskerville: var(--font-libre-baskerville), Georgia, serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: #2a1836;
+  --color-plum: #3b204a;
+  --color-plum-deep: #241430;
+  --color-lilac: #ebdcf4;
+  --color-lilac-soft: #f4ebf9;
+  --color-parchment: #fdf8e7;
+  --color-cream: #fffacd;
+  --color-gold: #c8a848;
+  --color-gold-deep: #634d0b;
+  --color-magenta: #d239f8;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, var(--color-lilac-soft) 0%, var(--color-lilac) 100%);
+  color: var(--color-ink);
+  font-family: var(--font-baskerville);
+}
+
+/* Gold rule — the horizontal divider used under headings */
+.gold-rule {
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-gold) 18%,
+    var(--color-gold) 82%,
+    transparent 100%
+  );
+}
+
+/* Ornamental frame — replaces the old baked-image text frames */
+.ornate-frame {
+  position: relative;
+  background: var(--color-parchment);
+  border: 1px solid var(--color-gold);
+  outline: 1px solid color-mix(in srgb, var(--color-gold) 45%, transparent);
+  outline-offset: 5px;
+  box-shadow: 0 12px 40px rgba(36, 20, 48, 0.18);
+}
+
+.ornate-frame::before,
+.ornate-frame::after {
+  content: "◆";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-gold);
+  font-size: 0.65rem;
+  line-height: 1;
+  background: var(--color-parchment);
+  padding: 0 0.5rem;
+}
+
+.ornate-frame::before {
+  top: -0.45rem;
+}
+
+.ornate-frame::after {
+  bottom: -0.45rem;
+}
+
+/* Gentle shimmer sweep, ported from the old site's attuned image */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 250, 205, 0.35) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  animation: shimmer 12s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  18% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
