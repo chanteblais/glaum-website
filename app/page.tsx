@@ -5,6 +5,7 @@ import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { SectionHeading } from "@/components/SectionHeading";
 import { DecreeCard } from "@/components/DecreeCard";
 import { SectionDivider } from "@/components/SectionDivider";
+import { ValuesTriptych } from "@/components/ValuesTriptych";
 
 function ResponsiveImage({
   base,
@@ -179,7 +180,7 @@ export default function HomePage() {
       {/* ── The sincere passage: a deeper ground for the essays ── */}
       <div className="essay-band mt-16">
         {/* ── Is this a joke? ── */}
-        <section id="attunement" className="py-16 scroll-mt-24">
+        <section id="attunement" className="py-16 scroll-mt-24 overflow-x-clip">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHeading>... Is this a joke?</SectionHeading>
 
@@ -187,13 +188,7 @@ export default function HomePage() {
             Glåüm operates on three core values:
           </p>
 
-          <div className="ornate-frame rounded-sm max-w-xl mx-auto px-7 py-10 sm:px-12">
-            <div className="font-tokyo text-2xl sm:text-4xl text-gold-deep text-center leading-snug space-y-3">
-              <div>• Compassion •</div>
-              <div>• Community •</div>
-              <div>• Playfulness •</div>
-            </div>
-          </div>
+          <ValuesTriptych />
 
           <div className="max-w-3xl mx-auto mt-14 space-y-6 text-lg lg:text-xl text-ink/85 leading-[1.7]">
             <p>

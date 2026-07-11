@@ -126,6 +126,42 @@ body {
   padding-top: 0.08em;
 }
 
+/* Folk-art arch panels for the three core values */
+.arch-panel {
+  border: 2px solid var(--color-gold);
+  border-radius: 999px 999px 14px 14px;
+  box-shadow:
+    inset 0 0 0 5px rgba(253, 248, 231, 0.35),
+    0 14px 36px rgba(36, 20, 48, 0.3);
+}
+
+/* Ribbon banner beneath the values */
+.value-ribbon {
+  border-top: 1.5px solid var(--color-gold);
+  border-bottom: 1.5px solid var(--color-gold);
+}
+
+.value-ribbon::before,
+.value-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 34px;
+  height: calc(100% - 16px);
+  background: var(--color-plum-deep);
+  z-index: -1;
+}
+
+.value-ribbon::before {
+  left: -24px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 38% 50%);
+}
+
+.value-ribbon::after {
+  right: -24px;
+  clip-path: polygon(0 0, 100% 0, 62% 50%, 100% 100%, 0 100%);
+}
+
 /* The quieter, deeper passage for the sincere essays
    (Is this a joke? / A note on cults) */
 .essay-band {
