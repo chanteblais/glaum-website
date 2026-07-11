@@ -48,7 +48,7 @@ export default function EventsPage() {
           <p className="text-lg lg:text-xl text-ink/85 leading-[1.7] mb-20">
             Join us at our upcoming events and attune your Glåümules in community.
           </p>
-          <h1 className="font-tokyo text-4xl lg:text-5xl mb-4 text-gold-deep">
+          <h1 className="font-tokyo text-4xl lg:text-5xl mb-6 text-gold-deep">
             Upcoming Events
           </h1>
           <div className="flex justify-center">

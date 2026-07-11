@@ -4,6 +4,7 @@ import { EntryScreen } from "@/components/EntryScreen";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { SectionHeading } from "@/components/SectionHeading";
 import { DecreeCard } from "@/components/DecreeCard";
+import { SectionDivider } from "@/components/SectionDivider";
 
 function ResponsiveImage({
   base,
@@ -42,7 +43,7 @@ export default function HomePage() {
       {/* ── Hero ── */}
       <section id="hero" className="pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-x-clip">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="hero-radiance mb-10">
+          <div className="hero-radiance mb-16">
             <div className="relative rounded-2xl overflow-hidden hero-frame">
               <Image
                 src="/images/hero-family-mobile.webp"
@@ -86,6 +87,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <SectionDivider glyph="eye" />
+
       {/* ── Testimonials ── */}
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -106,6 +109,8 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      <SectionDivider glyph="triangle" />
 
       {/* ── What is Glåüm ── */}
       <section className="py-16">
@@ -142,6 +147,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <SectionDivider glyph="hand" />
+
       {/* ── Glåümises ── */}
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -169,8 +176,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Is this a joke? ── */}
-      <section id="attunement" className="py-16 scroll-mt-24">
+      {/* ── The sincere passage: a deeper ground for the essays ── */}
+      <div className="essay-band mt-16">
+        {/* ── Is this a joke? ── */}
+        <section id="attunement" className="py-16 scroll-mt-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHeading>... Is this a joke?</SectionHeading>
 
@@ -301,6 +310,10 @@ export default function HomePage() {
         </div>
       </section>
 
+      </div>
+
+      <SectionDivider glyph="star" />
+
       {/* ── Tenets of Glåüm ── */}
       <section id="tenets" className="py-16 scroll-mt-24 overflow-x-clip">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -408,6 +421,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <SectionDivider glyph="teacup" />
+
       {/* ── Policies of the ManyHands ── */}
       <section id="policies" className="py-16 scroll-mt-24 overflow-x-clip">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -486,6 +501,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <SectionDivider glyph="eye" />
 
       {/* ── Registry invitation ── */}
       <section className="py-20">

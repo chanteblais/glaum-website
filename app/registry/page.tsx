@@ -22,7 +22,7 @@ export default async function RegistryPage() {
           <p className="font-tokyo text-sm tracking-[0.3em] text-gold-deep/80 mb-3">
             DEPARTMENT OF RECORDS &amp; RESONANCE
           </p>
-          <h1 className="font-tokyo text-4xl sm:text-5xl lg:text-6xl text-gold-deep mb-4">
+          <h1 className="font-tokyo text-4xl sm:text-5xl lg:text-6xl text-gold-deep mb-6">
             The Glåümer Registry
           </h1>
           <div className="flex justify-center mb-8">

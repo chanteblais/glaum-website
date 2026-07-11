@@ -70,7 +70,7 @@ export default async function AmendPage({
               Official Glåüm Paperwork · Form 7-G(a) · Record N
               <span className="align-super">o.</span> {formatRegNo(g.regNo)}
             </p>
-            <h1 className="font-tokyo text-3xl sm:text-4xl text-gold-deep mb-4">
+            <h1 className="font-tokyo text-3xl sm:text-4xl text-gold-deep mb-5">
               Amendment of Record
             </h1>
             <div className="flex justify-center mb-6">

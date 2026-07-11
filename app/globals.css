@@ -126,6 +126,18 @@ body {
   padding-top: 0.08em;
 }
 
+/* The quieter, deeper passage for the sincere essays
+   (Is this a joke? / A note on cults) */
+.essay-band {
+  background: linear-gradient(
+    180deg,
+    rgba(42, 24, 54, 0) 0%,
+    rgba(42, 24, 54, 0.16) 5%,
+    rgba(42, 24, 54, 0.16) 95%,
+    rgba(42, 24, 54, 0) 100%
+  );
+}
+
 /* Radiant sunburst behind the hero image */
 .hero-radiance {
   position: relative;
@@ -146,17 +158,19 @@ body {
       rgba(200, 168, 72, 0.55) 0deg 3.5deg,
       transparent 3.5deg 10deg
     );
+  /* Mask centre sits above the box centre so the burst fades out just
+     below the image instead of running down into the hero text. */
   mask-image: radial-gradient(
-    ellipse closest-side,
+    ellipse closest-side at 50% 46%,
     black 30%,
-    rgba(0, 0, 0, 0.6) 62%,
-    transparent 99%
+    rgba(0, 0, 0, 0.6) 60%,
+    transparent 96%
   );
   -webkit-mask-image: radial-gradient(
-    ellipse closest-side,
+    ellipse closest-side at 50% 46%,
     black 30%,
-    rgba(0, 0, 0, 0.6) 62%,
-    transparent 99%
+    rgba(0, 0, 0, 0.6) 60%,
+    transparent 96%
   );
   pointer-events: none;
 }

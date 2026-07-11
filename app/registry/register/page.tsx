@@ -26,7 +26,7 @@ export default async function RegisterPage({
             <p className="font-tokyo text-xs tracking-[0.3em] text-ink/50 mb-4">
               Official Glåüm Paperwork · Form 7-G (Rev. 1971)
             </p>
-            <h1 className="font-tokyo text-3xl sm:text-4xl text-gold-deep mb-4 text-balance">
+            <h1 className="font-tokyo text-3xl sm:text-4xl text-gold-deep mb-5 text-balance">
               Application for Voluntary Registration
             </h1>
             <div className="flex justify-center mb-6">
