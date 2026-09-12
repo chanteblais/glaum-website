@@ -42,8 +42,16 @@ remove a record from public view without deleting it.
 
 - `app/` — pages (home, events, registry).
 - `components/` — Nav, Footer, EntryScreen, NewsletterSignup (Brevo),
-  OrnateFrame/SectionHeading (the design system), Sigil (SVG sigils),
-  RegistryForm.
+  DecreeCard, ValuesTriptych, SectionHeading/SectionDivider, Sigil,
+  TenetIcon, RegistryForm, CopyKeyLink.
 - `lib/` — db access (`db.ts`, `schema.ts`, `glaumers.ts`) and the Form 7-G
   vocabularies (`registry-options.ts`).
 - `db/schema.sql` — canonical schema for production.
+
+## Docs
+
+`AGENTS.md` is the session brief for Claude (conventions, standing tasks).
+`docs/` holds the detailed docs: architecture, database, features, design
+system, branching, QA log. Index in `docs/README.md`.
+
+`npm run check` runs the typecheck and lint.
