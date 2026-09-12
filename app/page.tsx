@@ -372,7 +372,7 @@ export default function HomePage() {
                 ideology. The Many Hands of Glåüm is non-exclusive and strengthened
                 by diversity. Members from all other communities, faiths, or
                 ideologies are welcomed. The only requirement is a willingness to
-                hold love in your heart, and to engage with the Tenants of Glåüm in
+                hold love in your heart, and to engage with the Tenets of Glåüm in
                 good faith.
               </p>
             </DecreeCard>
