@@ -4,6 +4,12 @@ Running record of QA sweeps: what was tested, what was fixed, what is
 *known and deliberate* so it doesn't get re-reported, and where the
 remaining risk lives. Newest first.
 
+## 2026-09-12 — Events page shelved (`chore/shelve-events`)
+
+Removed `app/events/page.tsx`, its banner `public/images/glaum-events.png`
+(2.6 MB), and the nav item. No upcoming event to show. Verified:
+`npm run check` clean; production build static; `/` 200; `/events` 404.
+
 ## 2026-09-12 — Registry shelved (`chore/shelve-registry`)
 
 Removed from `main`: `app/registry/*`, `RegistryForm`, `CopyKeyLink`,
@@ -32,8 +38,6 @@ in this pass.
 - **The newsletter form declares success after 800 ms** without reading
   Brevo's response. Brevo's endpoint answers inside the hidden iframe and
   the page cannot read it cross-origin. A failed signup looks like success.
-- **The events page has one hardcoded event.** Editing the page is the
-  CMS.
 
 ### Open items
 
@@ -52,9 +56,8 @@ in this pass.
    `/` only and stays dismissed after "I am ready."
 2. At ~380 px wide: nav hamburger, the triptych stacking to one column,
    decree cards not overflowing, the ribbon's notched ends.
-3. Events page: the Luma iframe loads and the fallback link opens the event.
-4. Every nav anchor lands on its heading with the fixed nav clear of it.
-5. `/registry` and `/registry/register` return the 404 page.
+3. Every nav anchor lands on its heading with the fixed nav clear of it.
+4. `/registry`, `/registry/register`, and `/events` return the 404 page.
 
 Registry tests (run on `feat/registry` when it returns): register with all
 optional fields blank and confirm the welcome notice + copied link; amend

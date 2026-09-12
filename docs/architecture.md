@@ -16,7 +16,6 @@
 | Route | File | Rendering | Purpose |
 |---|---|---|---|
 | `/` | `app/page.tsx` | static | Home: hero, testimonials, Glåümises, essays + values, tenets, policies, newsletter |
-| `/events` | `app/events/page.tsx` | static | Events page with a Luma embed |
 | any other | `app/not-found.tsx` | static | 404 in the Department voice |
 
 `app/layout.tsx` wraps everything in `Nav` + `main` + `Footer` and loads the
@@ -84,9 +83,9 @@ Kept for when `feat/registry` comes back. On that branch:
   `sibforms` endpoint with `target="brevo-frame"` (a hidden iframe) so the
   page never navigates, then swaps to a thank-you after 800 ms. There is no
   real success signal.
-- **Luma** events: `app/events/page.tsx` hardcodes `LUMA_EVENT_SLUG` and
-  `LUMA_EVENT_ID` at the top of the file and renders the simple embed in an
-  iframe with a fallback link.
+- **Luma** (shelved with the events page, 2026-09-12): the page hardcoded
+  `LUMA_EVENT_SLUG` and `LUMA_EVENT_ID` and rendered the simple embed in
+  an iframe with a fallback link.
 - **Instagram** link in the footer.
 
 ## Config (`next.config.ts`)
