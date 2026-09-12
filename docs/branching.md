@@ -6,11 +6,12 @@ visible, revertable unit.
 
 ## Current state
 
-There is **no git remote**. The repo exists only on this machine and nothing
-has been pushed or deployed. The rules below are written for the intended
-end state (GitHub remote, Vercel deploying on push to `main`); until then,
-"ship" means "merge to `main`", and any session should say plainly that the
-work is local-only when it matters.
+`origin` is **github.com/chanteblais/glaum-website** (public, created
+2026-09-12; `main` first pushed the same day). Vercel is **not** linked to
+it yet, so a push does not deploy — the live glaum.ca still comes from the
+old static site's Vercel project. The rules below are written for the
+intended end state (Vercel deploying on push to `main`); until the link
+exists, "ship" means "merge to `main` and push".
 
 ## The rules
 
@@ -37,7 +38,8 @@ work is local-only when it matters.
 
 - Branch before the first edit when the change is non-trivial.
 - Merge only after Chanté has seen the change ("looks good", "merge it").
-  Once a remote exists, her approval to merge also covers the push/deploy.
+  Her approval to merge also covers the push (and, once Vercel is linked,
+  the deploy).
 - Never `git add -A` or `git stash` in the shared checkout. Stage explicit
   paths. The tree may hold Chanté's in-flight files (the triptych PNGs sat
   untracked for days before they were committed).
@@ -58,6 +60,6 @@ git add <paths> && git commit -m "Fix thing"
 git checkout main
 git merge --no-ff fix/thing -m "Fix thing (fix/thing)"
 git branch -d fix/thing
-# once a remote exists, on approval:
+# on approval:
 git push
 ```

@@ -45,8 +45,10 @@ embedded PGlite in dev / any Postgres via `DATABASE_URL` in prod · Vercel
 - **Branching:** `main` = deployable. Branch for anything non-trivial
   (`type/slug`: `feat/` `fix/` `ux/` `docs/` `chore/`), verify, merge
   `--no-ff`, delete the branch. Tiny tweaks may go straight to `main`.
-  There is **no git remote yet** — nothing is pushed anywhere; say so when
-  it matters. Full rules: `docs/branching.md`.
+  Remote: `origin` = github.com/chanteblais/glaum-website (public, added
+  2026-09-12). Push `main` only after Chanté has approved the change;
+  Vercel is not wired to this repo yet, so a push does not deploy. Full
+  rules: `docs/branching.md`.
 - **Verify:** `npm run check` (tsc + eslint) plus a click-through of the
   affected pages on a local dev server. No test suite exists.
 - **Review server (standing task):** once a change is implemented, start

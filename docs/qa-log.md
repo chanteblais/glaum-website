@@ -45,7 +45,8 @@ in this pass.
   the guard.
 - **Home page copy is baked into `app/page.tsx`.** Every copy edit is a
   deploy. Acceptable for now.
-- **No CI, no remote.** See `docs/branching.md`.
+- **No CI.** The remote exists (since 2026-09-12); nothing runs
+  `npm run check` on push yet. See `docs/branching.md`.
 
 ### Highest-value manual tests
 

@@ -143,6 +143,7 @@ admin UI.
    old `glaum-website` Vercel project (a static export from
    `chanteblais/glaum-website`).
 
-No CI exists yet. When a remote is added, a workflow running `npm run check`
-on push and PR is the obvious first step (the camp repo's
-`.github/workflows/ci.yml` is the template).
+The GitHub remote exists (`chanteblais/glaum-website`, since 2026-09-12)
+but no CI does. A workflow running `npm run check` on push and PR is the
+obvious first step (the camp repo's `.github/workflows/ci.yml` is the
+template).
