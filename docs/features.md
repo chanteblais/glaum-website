@@ -2,7 +2,8 @@
 
 Every page and section, who it's for, and the states worth knowing about.
 The audience is the public: prospective and existing Glåümers, and the
-curious. Nothing requires an account.
+curious. Nothing requires an account. The Glåümer Registry is shelved (see
+the end of this doc).
 
 ## Entry screen (`components/EntryScreen.tsx`)
 
@@ -15,7 +16,7 @@ on the home page. To test it again, clear the cookie.
 ## Nav and footer
 
 Fixed translucent plum nav with the wordmark and links: Home, Testimonials,
-Attunement, Benefits, Tenets, Policies, Events, Registry. Below `md` it
+Attunement, Benefits, Tenets, Policies, Events. Below `md` it
 collapses to a hamburger menu that closes on link click. Footer: Instagram
 link and "Glåüm.ca © 2022 – Sponsored by Shrimp™".
 
@@ -26,8 +27,8 @@ Top to bottom, separated by `SectionDivider` glyphs (`°•• ▲ ••°` sty
 1. **Hero** — family photo in a double gold frame with a sunburst behind it
    (`.hero-radiance`, `.hero-frame`), then the introductory paragraphs. No
    headline and no button; the image is the headline.
-2. **Testimonials** (`#testimonials`) — the scanned testimonials image with
-   a link to add yours to the Registry.
+2. **Testimonials** (`#testimonials`) — the scanned testimonials image,
+   "Real accounts from real Glåümers."
 3. **Glåümises** (`#values`; nav label "Benefits") — the "benefits" scan at
    full quality.
 4. **The sincere passage** (`.essay-band`, a deeper ground):
@@ -45,9 +46,7 @@ Top to bottom, separated by `SectionDivider` glyphs (`°•• ▲ ••°` sty
    Provisions I–II: "All feelings are Welcome. All Behaviours are Not" and
    "The Use of AI: Amplification, not Replacement". Long titles use
    `plainTitle` (Tokyo Dreams Plain).
-7. **The Glåümer Registry** — CTA pair: Browse the Registry / Register your
-   attunement.
-8. **Stay Attuned** (`NewsletterSignup`) — Brevo signup on a plum band.
+7. **Stay Attuned** (`NewsletterSignup`) — Brevo signup on a plum band.
    First name, last name, email. Posts into a hidden iframe and swaps to
    "Attunement initiated." after 800 ms regardless of Brevo's response.
 
@@ -59,7 +58,14 @@ and a fallback "Open on Luma" link. Event slug and ID are constants at the
 top of the file; there is one event, hardcoded. Adding events means editing
 this page.
 
-## The Glåümer Registry
+## Shelved: the Glåümer Registry (`feat/registry`)
+
+Built, then shelved on 2026-09-12 so the marketing site could ship without
+a database. Chanté likes the idea but it "isn't quite right yet". The
+branch has the full implementation; this section is what it did, so the
+next attempt starts from the design rather than from zero. On `main` the
+home page no longer has the Registry CTA section or the testimonials link,
+and the nav has no Registry item.
 
 The Registry is run by the fictional **Department of Records & Resonance**.
 Copy is bureaucratic satire; see `docs/design-system.md` → Voice.

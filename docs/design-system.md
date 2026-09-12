@@ -69,9 +69,9 @@ headings.
   `star`. Inherits `currentColor`; size with `className`.
 - **`TenetIcon`** — inline SVG by key: `regard` `ascension` `inclusivity`
   `satire` `feelings` `amplification`.
-- **`RegistryFormFields`** — the six Form 7-G fields; shared by register and
-  amend. Field styles are the `fieldLabel` / `fieldInput` / `fieldNote`
-  constants at the top of the file.
+- *(shelved on `feat/registry`)* **`RegistryFormFields`** — the six Form
+  7-G fields shared by register and amend; **`CopyKeyLink`** — copies the
+  Amendment Key URL.
 
 ## Buttons
 
@@ -79,20 +79,19 @@ All are pill-shaped, `font-tokyo tracking-widest text-sm`, uppercase copy.
 
 | Variant | Classes | Use |
 |---|---|---|
-| Primary | `bg-magenta text-cream hover:bg-[#b820d4]` | Register, submit, "Attune me" |
-| Secondary | `bg-plum text-cream hover:bg-plum-deep` | Browse, amend, return home |
+| Primary | `bg-magenta text-cream hover:bg-[#b820d4]` | "Attune me" (and the Registry's submit buttons) |
+| Secondary | `bg-plum text-cream hover:bg-plum-deep` | Return home (and the Registry's browse/amend) |
 | Ghost on dark | `border border-cream/40 text-cream hover:bg-cream/10` | Entry screen |
-| Text link | `underline decoration-gold underline-offset-4 hover:text-gold-deep` | "Return to the Registry" |
+| Text link | `underline decoration-gold underline-offset-4 hover:text-gold-deep` | "Open on Luma" |
 
-Notices (welcome/amended): `rounded-md border border-gold bg-parchment`.
-Errors: `border-magenta/50 bg-magenta/10`.
+Notices: `rounded-md border border-gold bg-parchment`.
+Errors: `border-magenta/50 bg-magenta/10`. (Both used by the shelved Registry.)
 
 ## Layout
 
 Content columns: `max-w-5xl` for sections, `max-w-2xl`/`max-w-3xl` for
-prose and forms, `max-w-6xl` for nav/footer. Pages start with `pt-28`
-(`pt-24` on events) to clear the fixed nav. Sections are `py-16`; the
-registry CTA `py-20`; newsletter `py-24`. Sections that could overflow
+prose, `max-w-6xl` for nav/footer. Pages start with `pt-28` (`pt-24` on
+events) to clear the fixed nav. Sections are `py-16`; newsletter `py-24`. Sections that could overflow
 horizontally (sunburst, triptych) use `overflow-x-clip`.
 
 ## Images
@@ -120,8 +119,8 @@ to WebP (`.webp({ quality: 82 })`) instead.
 
 Two registers, and the seam between them is the design.
 
-**The Department** — bureaucratic satire for the Registry, the nav labels,
-the 404, buttons, footnotes. Deadpan officialdom that is secretly warm:
+**The Department** — bureaucratic satire for the 404, the nav labels,
+buttons, footnotes, and the whole of the shelved Registry. Deadpan officialdom that is secretly warm:
 "Registration takes one to four minutes, depending on your knees."
 "Guard it as you would a small hand." "Errors are part of the record."
 Numbered forms, revision dates, record numbers, capitalized Nouns
