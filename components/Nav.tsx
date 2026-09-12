@@ -10,7 +10,6 @@ const links = [
   { href: "/#values", label: "Benefits" },
   { href: "/#tenets", label: "Tenets" },
   { href: "/#policies", label: "Policies" },
-  { href: "/events", label: "Events" },
 ];
 
 export function Nav() {

@@ -27,7 +27,7 @@ No database, no env vars.
 
 ## Structure
 
-- `app/` — pages (home, events).
+- `app/` — pages (home only right now).
 - `components/` — Nav, Footer, EntryScreen, NewsletterSignup (Brevo),
   DecreeCard, ValuesTriptych, SectionHeading/SectionDivider, Sigil,
   TenetIcon.

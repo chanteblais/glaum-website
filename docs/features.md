@@ -16,7 +16,7 @@ on the home page. To test it again, clear the cookie.
 ## Nav and footer
 
 Fixed translucent plum nav with the wordmark and links: Home, Testimonials,
-Attunement, Benefits, Tenets, Policies, Events. Below `md` it
+Attunement, Benefits, Tenets, Policies. Below `md` it
 collapses to a hamburger menu that closes on link click. Footer: Instagram
 link and "Glåüm.ca © 2022 – Sponsored by Shrimp™".
 
@@ -50,13 +50,14 @@ Top to bottom, separated by `SectionDivider` glyphs (`°•• ▲ ••°` sty
    First name, last name, email. Posts into a hidden iframe and swaps to
    "Attunement initiated." after 800 ms regardless of Brevo's response.
 
-## Events (`app/events/page.tsx`)
+## Shelved: Events (`app/events/page.tsx`, removed 2026-09-12)
 
-Banner image, intro copy, then one event card (currently the ManyHands
-Appreciation Gathering, "Sponsored by Shrimp™") with a Luma ticket embed
-and a fallback "Open on Luma" link. Event slug and ID are constants at the
-top of the file; there is one event, hardcoded. Adding events means editing
-this page.
+Was: a banner image (`public/images/glaum-events.png`, also removed), intro
+copy, then one event card (the ManyHands Appreciation Gathering,
+"Sponsored by Shrimp™") with a Luma ticket embed and a fallback "Open on
+Luma" link. Event slug and ID were constants at the top of the file; one
+event, hardcoded. Removed because there is no upcoming event to show.
+`git log -- app/events` finds it.
 
 ## Shelved: the Glåümer Registry (`feat/registry`)
 

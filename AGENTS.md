@@ -72,6 +72,9 @@ static site).
   all live there. Don't rebuild it on `main`; revive the branch. Its docs
   are kept in `docs/` marked as shelved so the design survives.
 - **Every page is static.** No server actions, no env vars, no database.
+- **The events page is also shelved** (2026-09-12): it was one hardcoded
+  Luma event and a banner. Last version is on `main` at the commit before
+  the "Shelve the events page" merge; `docs/features.md` describes it.
 - **Copy has two registers** (see `docs/design-system.md` → Voice): the
   bureaucratic-satire voice ("Department of Records & Resonance") for the
   404, buttons, footnotes and most of the site, and a plain sincere voice for the essays
@@ -86,8 +89,6 @@ static site).
 ## Key files
 - `app/page.tsx` — home (hero, testimonials, Glåümises, the sincere essays
   with the values triptych, tenets, policies, newsletter)
-- `app/events/page.tsx` — events page with the Luma embed (IDs hardcoded
-  at the top of the file)
 - `components/` — `Nav`, `Footer`, `EntryScreen`, `NewsletterSignup`
   (Brevo), `DecreeCard`, `ValuesTriptych`, `SectionHeading`,
   `SectionDivider`, `Sigil`, `TenetIcon`

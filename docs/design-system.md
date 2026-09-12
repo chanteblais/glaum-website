@@ -82,7 +82,7 @@ All are pill-shaped, `font-tokyo tracking-widest text-sm`, uppercase copy.
 | Primary | `bg-magenta text-cream hover:bg-[#b820d4]` | "Attune me" (and the Registry's submit buttons) |
 | Secondary | `bg-plum text-cream hover:bg-plum-deep` | Return home (and the Registry's browse/amend) |
 | Ghost on dark | `border border-cream/40 text-cream hover:bg-cream/10` | Entry screen |
-| Text link | `underline decoration-gold underline-offset-4 hover:text-gold-deep` | "Open on Luma" |
+| Text link | `underline decoration-gold underline-offset-4 hover:text-gold-deep` | Inline links in copy |
 
 Notices: `rounded-md border border-gold bg-parchment`.
 Errors: `border-magenta/50 bg-magenta/10`. (Both used by the shelved Registry.)
@@ -90,8 +90,8 @@ Errors: `border-magenta/50 bg-magenta/10`. (Both used by the shelved Registry.)
 ## Layout
 
 Content columns: `max-w-5xl` for sections, `max-w-2xl`/`max-w-3xl` for
-prose, `max-w-6xl` for nav/footer. Pages start with `pt-28` (`pt-24` on
-events) to clear the fixed nav. Sections are `py-16`; newsletter `py-24`. Sections that could overflow
+prose, `max-w-6xl` for nav/footer. Pages start with `pt-28` to clear the
+fixed nav. Sections are `py-16`; newsletter `py-24`. Sections that could overflow
 horizontally (sunburst, triptych) use `overflow-x-clip`.
 
 ## Images
