@@ -1,8 +1,12 @@
 # Database
 
-One table. Drizzle ORM over Postgres in prod, PGlite in dev.
+**There is no database on `main`.** The site is static. Everything below
+describes the Glåümer Registry, shelved on 2026-09-12 to branch
+`feat/registry`, which carries `db/schema.sql`, `lib/schema.ts`,
+`lib/db.ts`, `lib/glaumers.ts`, and the Drizzle / PGlite / postgres
+dependencies. Kept here so the design isn't lost.
 
-## `glaumers`
+## Shelved: `glaumers`
 
 | Column | Type | Notes |
 |---|---|---|
@@ -60,4 +64,5 @@ one file.
 |---|---|---|---|---|
 | 000 | `db/schema.sql` | 2026-07-09 (initial rebuild) | no | Creates `glaumers` |
 
-Applied to prod: **none** — there is no prod database yet.
+Applied to prod: **none** — there is no prod database, and none is needed
+until the Registry returns.

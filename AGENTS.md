@@ -6,7 +6,8 @@ are read on demand. Same pattern as the camp app and All Hands repos.
 
 ## This repo, not that one
 
-This is the public **glaum.ca** site (marketing pages + the Glåümer Registry).
+This is the public **glaum.ca** site (marketing pages; the Glåümer Registry
+is shelved on the `feat/registry` branch until it's right).
 It is **not** the Glåüm camp member app — that is `../glaum-camp-website`
 (deployed at camp.glaum.ca), with its own database, docs, and conventions.
 Nothing here talks to the camp app or its Supabase database, and the camp
@@ -25,15 +26,15 @@ differ from training data. Read the relevant guide in
 notices.
 
 **Stack:** Next.js 16 (App Router, Turbopack) · React 19 · TypeScript ·
-Tailwind v4 (CSS-first `@theme`, no `tailwind.config`) · Drizzle ORM ·
-embedded PGlite in dev / any Postgres via `DATABASE_URL` in prod · Vercel
-(target; not yet deployed — the live glaum.ca is still the old static site).
+Tailwind v4 (CSS-first `@theme`, no `tailwind.config`) · no database ·
+Vercel (target; not yet deployed — the live glaum.ca is still the old
+static site).
 
 ## Detailed docs — read only when relevant, don't preload
-- `docs/architecture.md` — routing, data flow, server actions, the Amendment
-  Key auth model, rendering, fonts/images, config, deploy
-- `docs/database.md` — the `glaumers` table, dev vs prod DB, seed records,
-  schema-change checklist, migrations ledger
+- `docs/architecture.md` — routing, rendering, fonts/images, embeds,
+  config, deploy
+- `docs/database.md` — there is none right now; what the shelved Registry
+  needs and where its schema lives
 - `docs/features.md` — every page and section, who it's for, key states
 - `docs/design-system.md` — tokens, fonts, CSS classes, component patterns,
   and the house voice
@@ -62,47 +63,36 @@ embedded PGlite in dev / any Postgres via `DATABASE_URL` in prod · Vercel
   `docs/architecture.md`, `docs/design-system.md` as relevant, so docs land
   in the **same commit** as the code. A commit that changes schema, routes,
   or UX with untouched docs is incomplete.
-- **Schema changes live in three places** and must stay identical:
-  `db/schema.sql` (canonical, run once in prod), `lib/schema.ts` (Drizzle),
-  and `CREATE_TABLE_SQL` in `lib/db.ts` (dev bootstrap). Checklist in
-  `docs/database.md`. Print any prod SQL verbatim in the final summary —
-  Chanté applies it herself.
 - **Images:** optimize before committing. Photos/scans → `.webp`;
   illustrations with alpha → palette-quantized PNG (sharp is in
   `node_modules` via Next; `docs/design-system.md` → Images has the recipe).
   Nothing over ~1 MB in `public/images/` without a reason.
-- **Registry auth is the URL.** A record's `edit_token` (the "Amendment
-  Key") travels as `?key=` and is the sole credential. Never log it, never
-  render it anywhere but the custodian's own links. Moderation is the
-  `hidden` flag, flipped in the database — there is no admin UI.
-- **Registry pages are `force-dynamic`** and writes call `revalidatePath`.
-  Marketing pages are static.
+- **The Registry is shelved** (2026-09-12) on `feat/registry`: its routes,
+  `lib/` data layer, `db/schema.sql`, and the Drizzle/PGlite/postgres deps
+  all live there. Don't rebuild it on `main`; revive the branch. Its docs
+  are kept in `docs/` marked as shelved so the design survives.
+- **Every page is static.** No server actions, no env vars, no database.
 - **Copy has two registers** (see `docs/design-system.md` → Voice): the
   bureaucratic-satire voice ("Department of Records & Resonance") for the
-  Registry and most of the site, and a plain sincere voice for the essays
+  404, buttons, footnotes and most of the site, and a plain sincere voice for the essays
   and the tenet/policy cards. Don't let the joke leak into the sincere
   sections.
 - **Entry overlay** (`EntryScreen`) is gated by the `glaum_initiated` cookie
   (1 year). Clear it to see the overlay again.
-- `next.config.ts`: `serverExternalPackages` keeps PGlite/postgres unbundled
-  (PGlite loads WASM at runtime); `images.qualities` allows `quality={100}`
-  for scans; `turbopack.root` is pinned because a stray `package-lock.json`
-  sits in the parent folder.
+- `next.config.ts`: `images.qualities` allows `quality={100}` for scans;
+  `turbopack.root` is pinned because a stray `package-lock.json` sits in
+  the parent folder.
 
 ## Key files
 - `app/page.tsx` — home (hero, testimonials, Glåümises, the sincere essays
-  with the values triptych, tenets, policies, registry CTA, newsletter)
+  with the values triptych, tenets, policies, newsletter)
 - `app/events/page.tsx` — events page with the Luma embed (IDs hardcoded
   at the top of the file)
-- `app/registry/page.tsx` · `register/page.tsx` · `[slug]/page.tsx` ·
-  `[slug]/amend/page.tsx` · `actions.ts` (server actions: register, amend)
-- `lib/db.ts` (DB bootstrap + seed) · `lib/schema.ts` · `lib/glaumers.ts`
-  (queries) · `lib/registry-options.ts` (Form 7-G vocabularies)
 - `components/` — `Nav`, `Footer`, `EntryScreen`, `NewsletterSignup`
-  (Brevo), `RegistryForm`, `CopyKeyLink`, `DecreeCard`, `ValuesTriptych`,
-  `SectionHeading`, `SectionDivider`, `Sigil`, `TenetIcon`
+  (Brevo), `DecreeCard`, `ValuesTriptych`, `SectionHeading`,
+  `SectionDivider`, `Sigil`, `TenetIcon`
 - `app/globals.css` — all design tokens and the house CSS classes
-- `db/schema.sql` — canonical production schema
+- `lib/` — empty right now (the Registry's data layer is on `feat/registry`)
 
 ## Design (brief; full in `docs/design-system.md`)
 Lilac gradient page ground · Ink `#2a1836` body text · Gold `#c8a848` rules and

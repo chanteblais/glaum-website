@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { EntryScreen } from "@/components/EntryScreen";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -100,13 +99,7 @@ export default function HomePage() {
             className="rounded-2xl overflow-hidden shadow-2xl max-w-3xl mx-auto border border-gold/40"
           />
           <p className="text-center mt-8 text-ink/70 italic">
-            Real accounts from real Glåümers.{" "}
-            <Link
-              href="/registry"
-              className="underline decoration-gold underline-offset-4 hover:text-gold-deep"
-            >
-              Add yours to the Registry.
-            </Link>
+            Real accounts from real Glåümers.
           </p>
         </div>
       </section>
@@ -496,39 +489,6 @@ export default function HomePage() {
               </p>
             </DecreeCard>
           </div>
-        </div>
-      </section>
-
-      <SectionDivider glyph="eye" />
-
-      {/* ── Registry invitation ── */}
-      <section className="py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionHeading>The Glåümer Registry</SectionHeading>
-          <div className="max-w-2xl mx-auto space-y-6 text-lg lg:text-xl text-ink/85 leading-[1.7]">
-            <p>Attunement is felt in the heart. It is recorded in the Registry.</p>
-            <p>
-              Browse the official record of registered Glåümers, or complete Form
-              7-G to take your rightful place among the ManyHands.
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-            <Link
-              href="/registry"
-              className="px-8 py-3 rounded-full font-tokyo tracking-widest text-sm bg-plum text-cream transition-colors hover:bg-plum-deep"
-            >
-              BROWSE THE REGISTRY
-            </Link>
-            <Link
-              href="/registry/register"
-              className="px-8 py-3 rounded-full font-tokyo tracking-widest text-sm bg-magenta text-cream transition-colors hover:bg-[#b820d4]"
-            >
-              REGISTER YOUR ATTUNEMENT
-            </Link>
-          </div>
-          <p className="text-sm text-ink/50 mt-6 italic">
-            Registration is voluntary. Attunement is not.
-          </p>
         </div>
       </section>
 
