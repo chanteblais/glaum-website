@@ -17,6 +17,11 @@ const tokyoDreams = localFont({
   variable: "--font-tokyo-dreams",
 });
 
+const tokyoDreamsPlain = localFont({
+  src: "../public/fonts/TokyoDreamsPlain.otf",
+  variable: "--font-tokyo-dreams-plain",
+});
+
 export const metadata: Metadata = {
   title: "Glåüm — More Than Love.",
   description:
@@ -34,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${libreBaskerville.variable} ${tokyoDreams.variable} h-full antialiased`}
+      className={`${libreBaskerville.variable} ${tokyoDreams.variable} ${tokyoDreamsPlain.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Nav />

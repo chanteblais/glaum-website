@@ -332,6 +332,7 @@ export default function HomePage() {
               kicker="Tenets of Glåüm · Article I"
               title="Unconditional Positive Regard"
               icon="regard"
+              plainTitle
               footer="Ratified by the ManyHands of Glåüm"
             >
               <p>
@@ -441,6 +442,7 @@ export default function HomePage() {
               kicker="Policies of the ManyHands · Provision I"
               title="All feelings are Welcome. All Behaviours are Not"
               icon="feelings"
+              plainTitle
               footer="Upheld by the ManyHands of Glåüm"
             >
               <p>

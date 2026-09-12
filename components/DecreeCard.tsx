@@ -25,12 +25,15 @@ export function DecreeCard({
   title,
   icon,
   footer,
+  plainTitle = false,
   children,
 }: {
   kicker: string;
   title: string;
   icon: string;
   footer: string;
+  /* Tokyo Dreams Plain — for titles where the ornate face gets too busy */
+  plainTitle?: boolean;
   children: React.ReactNode;
 }) {
   return (
@@ -54,7 +57,9 @@ export function DecreeCard({
       </div>
 
       {/* Title */}
-      <h3 className="font-tokyo text-2xl sm:text-3xl text-gold-deep text-center mb-5 text-balance">
+      <h3
+        className={`${plainTitle ? "font-tokyo-plain" : "font-tokyo"} text-2xl sm:text-3xl text-gold-deep text-center mb-5 text-balance`}
+      >
         {title}
       </h3>
       <div className="flex justify-center mb-8">

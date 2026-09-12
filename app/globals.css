@@ -2,6 +2,7 @@
 
 @theme inline {
   --font-tokyo: var(--font-tokyo-dreams), serif;
+  --font-tokyo-plain: var(--font-tokyo-dreams-plain), serif;
   --font-baskerville: var(--font-libre-baskerville), Georgia, serif;
 
   --color-ink: #2a1836;
@@ -124,15 +125,6 @@ body {
   line-height: 0.8;
   padding-right: 0.14em;
   padding-top: 0.08em;
-}
-
-/* Folk-art arch panels for the three core values */
-.arch-panel {
-  border: 2px solid var(--color-gold);
-  border-radius: 999px 999px 14px 14px;
-  box-shadow:
-    inset 0 0 0 5px rgba(253, 248, 231, 0.35),
-    0 14px 36px rgba(36, 20, 48, 0.3);
 }
 
 /* Ribbon banner beneath the values */
